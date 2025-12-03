@@ -9,6 +9,7 @@ class Node {
 class LinkedList {
     constructor(){
         this.head = null;
+        this.size = 0;
     }
     // insert at end
     insert(data){
@@ -22,12 +23,14 @@ class LinkedList {
             current = current.next;
         }
         current.next = newNode;
+        this.size++;
     }
     // insert ar begining;
     insertAtBeginning(data){
     const newNode = new Node(data);
     newNode.next = this.head;
     this.head = newNode;
+    this.size++;
     }
     // print elements of list
     print(){
