@@ -15,6 +15,7 @@ class Queue {
         if(this.isEmpty()) return 'Queue is empty';
         const item = this.queue[this.frontIndex];
         delete this.queue[this.frontIndex];
+        this.frontIndex++;
         return item;
     }
     front(){
@@ -35,6 +36,6 @@ const queue = new Queue;
 queue.enqueue('A');
 queue.enqueue('B');
 queue.enqueue('C');
-// console.log(queue.dequeue());
+console.log(queue.dequeue());
 console.log(queue.size());
 queue.print();
